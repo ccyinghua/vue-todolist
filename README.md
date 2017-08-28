@@ -4,7 +4,7 @@
 
 ## 运行
 
-```
+```javascript
 # install dependencies
 npm install
 
@@ -15,7 +15,7 @@ npm run dev
 ## localStorageBenin存储
 ### App.vue
 
-```
+```javascript
 import Store from './store' 
 
 export default {
@@ -39,7 +39,7 @@ export default {
 ```
 ### store.js
 
-```
+```javascript
 const STORAGE_KEY = 'todos-vuejs'
 export default {
     fetch() {    // 取得本地缓存中对应的值
