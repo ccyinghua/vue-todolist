@@ -70,7 +70,6 @@ props: ['msgfromfather']
 <parent>
     <child :child-msg="msg"></child>  // 这里必须要用 - 代替驼峰
 </parent>
-
 data(){
     return {
         msg: [1,2,3]
