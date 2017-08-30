@@ -7,13 +7,17 @@
                 {{item.label}}
             </li>
         </ul>
+        <h1>child tells me:{{ childWords }}</h1>
+        <component-a msgfromfather="I am father msg" @doSomething="listen"></component-a>
     </div>
 </template>
 
 <script>
-import Store from './store' 
+import Store from './store'
 console.log(Store);
 // window.localStorage.clear()  // 清除本地缓存
+import ComponentA from './components/componentA.vue'
+
 export default {
     data:function(){
         return{
@@ -29,7 +33,8 @@ export default {
                 //     isfinished:true
                 // }
             //],
-            newItem:''
+            newItem:'',
+            childWords:''
         }
     },
     methods:{
@@ -42,8 +47,11 @@ export default {
                     label:this.newItem,
                     isfinished:false
                 });
-                this.newItem = '' 
+                this.newItem = ''
             }
+        },
+        listen:function(msg){
+            this.childWords = msg;  //从子组件获得的msg值赋值给childWords
         }
     },
     watch:{
@@ -53,6 +61,9 @@ export default {
             },
             deep:true   // 深度观察
         }
+    },
+    components:{
+        ComponentA
     }
 }
 </script>
