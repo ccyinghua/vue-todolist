@@ -54,7 +54,7 @@ export default {
 1. 父组件传递数据给子组件
 - 传递普通字符串
 
-```
+```html
 父组件：
 <parent>
     <child msgfromfather="I am father msg"></child>  // 这里必须要用 - 代替驼峰
@@ -65,7 +65,7 @@ props: ['msgfromfather']
 ```
 - 动态传递
 
-```
+```javascript
 父组件：
 <parent>
     <child :child-msg="msg"></child>  // 这里必须要用 - 代替驼峰
@@ -92,7 +92,7 @@ data(){
 ```
 2. 子组件与父组件通信
 
-```
+```javascript
 子组件：
 <template>
     <div @click="up"></div>
