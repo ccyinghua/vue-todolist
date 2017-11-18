@@ -15,3 +15,7 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+*.js linguist-language=Vue
+*.css linguist-language=Vue
+*.html linguist-language=Vue
